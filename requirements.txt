@@ -1,0 +1,7 @@
+Django=="3.2.9"
+python-dotenv
+requests
+datetime
+psycopg2
+gunicorn
+pipenv
