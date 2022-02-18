@@ -1,0 +1,55 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'app/service_get_ip.css' %}">
+{% endblock %}
+
+{% block head_desc %}
+{% endblock %}
+{% block head_button %}
+{% if form %}
+{% else %}
+Quyidagi faylni yuklab oling
+<a href="{% url 'service_get_net_use' path %}" class="header__link button">Yuklab olish</a>
+{% endif %}
+{% endblock %}
+{% block section %}
+
+
+
+<div class="container">
+    {% if form %}
+    <p class="desc">Bog'lanmoqchi bo'lgan kompyuteringiz ip addresini kiriting. Agar ip addresini bilmasangiz, o'sha kompyuter orqali <a class="link" href="{% url 'service_get_ip' %}">xizmatlar/ip addresni aniqlash</a>   menyusiga kiring</p>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="">
+            {{field.errors}}
+            {{ field }}
+        </div>
+        {% endfor %}
+        <input type="submit" name="" id="" value='Ok' class='submit'>
+    </form>
+    {% else %}
+    <section class="info">
+        <article class="article">
+            
+            <h2 class="title">Yuklab olgandan keyin o'sha faylni oching va quyidagi yordamchi instruksiyaga nazar soling:</h2>
+            <p class="article__desc">
+                O'zingizga kerakli papka yoki file ni tanlang
+            </p>
+            <img class="img" src="../../../static/recourse/img/services/folder list.png" alt="">
+            <p class="article__desc">Context menuni ochish uchun sichqonchaning o'ng tugmasini bosing va quyidagi menuni tanlng</p>
+            <img src="../../../static/recourse/img/services/selected file.png" alt="" class="img">
+            <p class="article__desc">
+                Bizdan file yoki papkani Рабочий столga joylash uchun ruxsat so'raydi va uni tasdiqlaymiz.
+            </p>
+
+            <img src="../../../static/recourse/img/services/yes.png" alt="" class="img">
+            <p class="article__desc">Рабочий столda biz xohlagan papka paydo bo'ladi. <br>Agarda biron muammo sodir bo'lgan bo'lsa ozroq muddatdan so'ng qaytatdan urinib ko'ring, chunki local tarmoqda uzilishlar bo'lgan bo'lishi mumkin.</p>
+            
+        </article>
+    </section>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'statistic/basic.html' %}
+{% block title %}
+Barcha ishchilar
+{% endblock %}
+
+
+
+{% block section %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover" id="userTable">
+                    <thead>
+                        <tr>
+                            <th>Ism Familiya</th>
+                            <th>Tugilgan sana</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for w in workers %}
+                        <tr>
+                            <td>{{ w.name }}</td>
+                            <td>{{ w.date_bday }}</td>
+                            
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

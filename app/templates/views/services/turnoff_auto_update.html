@@ -1,0 +1,42 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'app/service_get_ip.css' %}">
+{% endblock %}
+
+{% block head_button %}
+
+Quyidagi faylni yuklab oling
+<a href="{% url 'service_turnoff_auto_update' 'True' %}" class="header__link button">Yuklab olish</a>
+
+{% endblock %}
+
+
+{% block section %}
+
+<div class="container">
+    <section class="info">
+        <article class="article">
+            <h2 class="title">Yuklab olgandan so'ng quyidagi amallarni bajaring:</h2>
+
+            <p class="article__desc">
+                Ctrl va J tugmalarini bosing, yani Ctrl + J, va sizda quyidagi menyu ochiladi.
+            </p>
+            <img class="img" src="../../../static/recourse/img/services/history.png" alt="">
+
+            <p  class="article__desc">Yuklab olingan file qaysi papkaga tushganini bilish uchun quyidagi tugmani bosing  (P.S Bu tugma brauzerning turiga qarab har xil ko'rinishda bo'lishi mumkin)</p>
+
+            <img class="img" src="../../../static/recourse/img/services/showinfolder.png" alt="">
+            
+            <p class="article__desc">
+                Papka ochilgandan so'ng ko'rsatilgan fileni belgilaymiz va sichqonchaning o'ng tugmasini bosib kontekst menyuni ochib, "Administrator orqali kirish" tugmasini bosamiz
+            </p>
+            
+            <img class="img" src="../../../static/recourse/img/services/runasadmin.png" alt="">
+
+        </article>  
+    </section>
+</div>
+
+{% endblock %}

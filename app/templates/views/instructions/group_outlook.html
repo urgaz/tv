@@ -1,0 +1,39 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block head_desc %}
+Outlookda domain nomi bilan gruppaga ajratish <br>
+Videoni online ko'rishingiz yoki yuklab olishingiz mumkin
+{% endblock %}
+
+{% block head_button %}
+<a class="header__link button"  href="https://r2---sn-2uuxa3vh-cuil.googlevideo.com/videoplayback?expire=1632830070&ei=Fq5SYZ_jH4X71gLZiJtg&ip=36.90.31.139&id=o-AEEqkmi8wcalyznk99ZmBfJW3KBt5y4v3Oo0kQkq6W3n&itag=22&source=youtube&requiressl=yes&mh=NX&mm=31%2C29&mn=sn-2uuxa3vh-cuil%2Csn-npoeenll&ms=au%2Crdu&mv=m&mvi=2&pl=23&initcwndbps=376250&vprv=1&mime=video%2Fmp4&ns=2OL0CTCanY2gjDq_0JmMYuIG&cnr=14&ratebypass=yes&dur=356.937&lmt=1632808353236165&mt=1632807652&fvip=2&fexp=24001373%2C24007246&beids=9466586&c=WEB&txp=6211224&n=au6agXjk8OaTehn&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAMTg30XvTn6is967iqRtP9XQNa2QjHwxrxUcsPl_MO6_AiEAr_i_trgdKwQHJquK9j3HiA3d5oqmt2I_8rb8D9v-In0%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJbvVTckFp6yOK9Dm1R4I1qSwfTCBLlbz98TDPGapKvqAiEA8C57pSwclU58-7OOZN3moBiuVgOYpBAc11y-x7Tp85o%3D&title=create%20group%20in%20outlook">Yuklab olish</a>
+{% endblock %}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'app/additional.css' %}">
+{% endblock %}
+
+
+{% block section %}
+
+
+
+
+
+<div class="container">
+    <section class="info">
+        <article class="article">
+            <!-- <video class="standart_video" controls>
+                <source src="../../../static/recourse/video/create group in outlook.mp4" type="video/mp4">
+                Sizning browseringiz video ochish uchun javob bermaydi, iltimos browserni yangilang yoki boshqa browserdan foydalaning
+            </video> -->
+
+            <iframe class="standart_video" width="1280" height="720" src="https://www.youtube.com/embed/KmStb-RAuuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+    </section>
+</div>
+
+
+{% endblock %}

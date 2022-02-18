@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://example.elite-house.uz/users -->
+<html lang="ru" style="height: auto; min-height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#f39c12">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'statistic/form.css' %}">
+    <!-- AdminLTE styles -->
+    <link rel="stylesheet" href="{% static 'statistic/AdminLTE.min.css' %}">
+    <!-- AdminLTE skin styles -->
+    <link rel="stylesheet" href="{% static 'statistic/skin-yellow.min.css' %}">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'statistic/app.css' %}">
+    <!-- Google Font -->
+  <link rel="stylesheet" href="{% static 'statistic/css.css' %}">
+    <title> Вход</title>
+</head>
+<body class="skin-yellow sidebar-mini" style="height: auto; min-height: 100%;">
+
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="" class="logo">
+                <!-- Logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b></b></span>
+                <!-- Logo for regular state and mobile devices -->
+                <span class="logo-lg"><b></b></span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button -->
+                
+                <!-- Navbar right menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <!-- /.search form -->
+                <!-- Sidebar menu -->
+
+                </ul>
+            </section>
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 813px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h3>
+        
+        
+      </h3>
+      <ol class="breadcrumb">
+        
+        
+    <li class="active"></li>
+
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content container-fluid">
+        
+        <div class = "login-page">
+            
+            <div class="form">
+                <form method = "post" enctype="multipart/form-data" class="login-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button>Ок</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      
+    </div>
+    <!-- Default to the left -->
+    <strong></strong> <small></small>
+  </footer>
+    </div>
+
+
+    <script src="{% static 'statistic/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'statistic/bootstrap.min.js' %}"></script>
+    <script src="{% static 'statistic/adminlte.min.js' %}"></script>
+    
+    <script src="{% static 'statistic/users.js' %}"></script>
+
+
+</body>
+
+</html>

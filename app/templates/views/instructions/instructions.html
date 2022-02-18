@@ -1,0 +1,32 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block section %}
+
+<main class="container">
+    <section class="cards">
+        <!-- _____1 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">urgaz.com uchun outlook ochish</h2>
+            </div>
+
+            <i class="card__icon fas fa-envelope-open"></i>
+            <a href="https://telegra.ph/Install-Outlook-for-urgazcom-09-02" target="_blank" class="button">Kirish</a>
+        </div>
+        
+        
+        <!-- _____1 -->
+         <div class="card">
+             <div class="card__box">
+                 <h2 class="card__title">Outlookda domain nomi bilan gruppaga ajratish</h2>
+             </div>
+         
+             
+             <i class="card__icon fas fa-mail-bulk"></i>
+             <a href="{% url 'group_outlook' %}" target="_blank" class="button">Kirish</a>
+         </div>
+
+
+</main>
+{% endblock %}

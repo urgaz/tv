@@ -1,0 +1,40 @@
+{% extends 'statistic/basic.html' %}
+{% load static %}
+{% block link %}
+
+
+<link rel="stylesheet" href="{% static 'statistic/my.css' %}">
+
+{% endblock %}
+
+{% block section %}
+
+
+
+<div class="box">
+        <div class="box-body">
+            <form method = "post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                        {{ field.errors }} 
+                  
+                        {% if field.name == 'date' %}
+                        {{ field.label_tag }} <div class="form-date"> {{ field }}</div>
+                        {% else %}
+                        {{ field.label_tag }} {{ field }}
+                        {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-md-6 col-sm-12">
+            <div class="form-buttons">
+                <input class="save-button btn btn-flat bg-orange" id="submit" name="submit" type="submit" value="Изменить">
+            </div>
+            </div>
+            </form>
+            
+        </div>
+    </div>
+{% endblock %}

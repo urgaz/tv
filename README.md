@@ -1,1 +1,7 @@
-# tv
+# Simple .env
+ENVIRONMENT=local
+DB_HOST=localhost 
+DB_PORT=5432 
+DB_NAME= 
+DB_USER= 
+DB_PASSWORD=

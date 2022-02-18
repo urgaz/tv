@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://example.elite-house.uz/users -->
+<html lang="en" style="height: auto; min-height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://kit.fontawesome.com/2707a376d5.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#f39c12">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'statistic/submenu.css' %}">
+    <!-- AdminLTE styles -->
+    <link rel="stylesheet" href="{% static 'statistic/AdminLTE.min.css' %}">
+    <!-- AdminLTE skin styles -->
+    <link rel="stylesheet" href="{% static 'statistic/skin-yellow.min.css' %}">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'statistic/app.css' %}">
+    <!-- Google Font -->
+  <link rel="stylesheet" href="{% static 'statistic/css.css' %}">
+  {% block link %} {% endblock %}
+    <title> {% block title %} {% endblock %}</title>
+</head>
+<body class="skin-yellow sidebar-mini" style="height: auto; min-height: 100%;">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="" class="logo">
+                <!-- Logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b></b></span>
+                <!-- Logo for regular state and mobile devices -->
+                <span class="logo-lg"><b></b></span>    <!--company name -->
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button -->
+                <a href="" class="sidebar-toggle fas fa-bars" data-toggle="push-menu" role="button"></a>
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar right menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <!-- /.search form -->
+                <!-- Sidebar menu -->
+
+                <ul class="sidebar-menu accordion" id="accordion">
+                    
+                    <li class="header">НАВИГАЦИЯ</li>
+                    
+                    <li class=""><div class="link"><a> <i class="fas fa-user-tie icon"></i>Ishchilar</a><i class="fa fa-chevron-down" style="color: white;"></i></div>
+                        
+                        <ul class="submenu">
+                          
+                          <li><a href="{% url 'workers_all' %}"><i class="fas fa-list-ul" style="color: seashell;"></i>Jami ro'yxat</a></li>
+                          <li><a href="{% url 'create_worker' %}"><i class="fas fa-plus-square" style="color: seashell;"></i>Qo'shish</a></li>
+                        </ul>
+                    </li>                    
+                    
+                    
+                    <li class=""><div class="link"><a> <i class="fas fa-tools icon"></i>Stanok</a><i class="fa fa-chevron-down" style="color: white;"></i></div>
+                        
+                        <ul class="submenu">
+                          
+                          <li><a href="{% url 'stanok_all' %}"><i class="fas fa-list-ul" style="color: seashell;"></i>Jami ro'yxat</a></li>
+                          <li><a href="{% url 'create_stanok' %}"><i class="fas fa-plus-square" style="color: seashell;"></i>Qo'shish</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class=""><div class="link"><a> <i class="fas fa-book-open icon"></i>Hisobot</a><i class="fa fa-chevron-down" style="color: white;"></i></div>
+                        
+                        <ul class="submenu">
+                          
+                          <li><a href="{% url 'reports_all' 'Jami' 0 0 0 %}"><i class="fas fa-list-ul" style="color: seashell;"></i>Jami ro'yxat</a></li>
+                          <li><a href="{% url 'create_report' %}"><i class="fas fa-plus-square" style="color: seashell;"></i>Qo'shish</a></li>
+                        </ul>
+                    </li>
+                   
+
+
+
+                </ul>
+            </section>
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 813px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+      <h3>
+      {% block h3 %}
+      {% endblock %}  
+
+      </h3>
+      <ol class="breadcrumb">
+        
+        
+    <li class="active">{% block active %}{% endblock %}</li>
+
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content container-fluid">
+        {% block section %}
+        {% endblock %}
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Административная панель
+    </div>
+    <!-- Default to the left -->
+    
+  </footer>
+    </div>
+    {% block script %}
+    {% endblock %}
+    <script src="{% static 'statistic/jquery.min.js' %}"></script>
+    <script src="{% static 'statistic/adminlte.min.js' %}"></script>
+    <!-- <script src="{% static 'statistic/jquery-3.3.1.slim.min.js' %}"></script> -->
+    <script src="{% static 'statistic/bootstrap.min.js' %}"></script>
+    
+    
+    <!-- <script src="{% static 'statistic/users.js' %}"></script> -->
+
+
+</body></html>

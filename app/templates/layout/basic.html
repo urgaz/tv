@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'recourse/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/main.css' %}">
+    {% block link %}
+    {% endblock %}
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+     -->
+    
+    <script src="#"></script> <!-- dont play all tags in transition -->
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="{% url 'statistic' 1 %}" class="logo">
+                <img src="{% static 'recourse/img/logo.png' %}" alt="" class="logo__img">
+            </a>
+            <ul class="menu">
+                <!-- <li><a href="" class="menu__link"><i class="menu__icon far fa-newspaper"></i>Статьи</a></li> -->
+                <li><a href="{% url 'services' %}" class="menu__link"><i class="menu__icon fas fa-book-open"></i>Xizmatlar</a></li>
+                <!-- <li><a href="" class="menu__link"><i class="menu__icon fas fa-headset"></i>Поддержка</a></li> -->
+                <!-- <li><a href="" class="menu__link"><i class="menu__icon far fa-address-book"></i>Контакты</a></li> -->
+            </ul>
+            <ul class="menu">
+                <li><a href="{% url 'instructions' %}" class="menu__link"><i class="menu__icon fas fa-chalkboard-teacher"></i>Instruksiya</a></li>
+            </ul>
+            <a href="" class="avatar"><img src="{% static 'recourse/img/urgaz_logo2.png' %}" alt="" class="avatar__img"></a>
+                <!-- <img src="{% static 'recourse/img/urgaz_logo2.png' %}" alt="" class="avatar__img"></a> -->
+            
+            </nav>
+        <div class="container">
+            <div class="header__content">
+                <div class="header__box">
+                    <h1 class="header__title">Urgaz Tutorials</h1>
+                </div>
+                <p class="header__desc">{% block head_desc %} {% endblock %}</p>
+                {% block head_button %} {% endblock %}
+                <!-- <a href="" class="header__link button">Подробнее</a> -->
+
+            </div>
+        </div>
+    </header>
+    {% block section %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="container footer__content">
+            <h2 class="footer__title">Urgaz Tutorials</h2>
+            <div class="footer__links">
+                <a href="tel:+998981708010" class="footer__tel">+998 98 170 80 10</a>
+                <a href="tel:+998981370224" class="footer__tel">+998 98 137 02 24</a> 
+                <a href="tel:+998990920261" class="footer__tel">+998 99 092 02 61 </a> 
+                <!-- <a href="mailto:support@allmarketing.com" class="footer__mail">@xiidot1303</a> -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+{% extends 'statistic/basic.html' %}
+
+{% load static %}
+{% load index %}
+{% load tag_library %}
+
+{% block title %}
+Hisobotlar
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'statistic/fixed.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'statistic/filter.css' %}">
+<link rel="stylesheet" href="{% static 'statistic/form.css' %}">
+{% endblock %}
+
+{% block section %}
+            
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>
+            <nav class="intable">
+                <ul>
+        
+                  <li><a href="#" class="intable__a">Stanok</a>
+                    <ul id="submenyu">
+                        <li><a href="{% url 'reports_all' 'Jami' year month day %}">Jami</a></li>  
+                      {% for i in stanoks %}
+                      <li><a href="{% url 'reports_all' i.number year month day %}">{{ i.number }}. {{ i.title }}</a></li>
+                      {% endfor %}
+                  
+                    </ul>
+                  </li>
+        
+                </ul>
+              </nav>
+          </th>
+          <th>Atqi (m<sup>2</sup>) 1-st</th>
+          <th>Atqi (m<sup>2</sup>) 2-st</th>
+          <th>Atqi (m<sup>2</sup>) 3-st</th>
+          <th>Jami</th>
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Yil</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'reports_all' st 0 month day %}">Jami</a></li>  
+                    {% for i in years %}
+                    <li><a href="{% url 'reports_all' st i|to_int month day %}">{{ i }}</a></li>
+                    {% endfor %}
+                
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Oy</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'reports_all' st year 0 day %}">Jami</a></li> 
+                    {% for i in months %}
+                    <li><a href="{% url 'reports_all' st year forloop.counter day %}">{{ i }}</a></li>
+                    
+                    {% endfor %}
+                    
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Kun</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'reports_all' st year month 0 %}">Jami</a></li> 
+                    {% for i in days %}
+                    <li><a href="{% url 'reports_all' st year month i|to_int %}">{{ i }}</a></li>
+                    
+                    {% endfor %}
+                    
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+          <th>Harakat</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+
+
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for r in reports %}
+        <tr>
+           
+            <td>{{ forloop.counter }}</td>
+            <td>{{ r.stanok }}</td>
+            <td>{{ r.value }}</td>
+            <td>{{ r.value2 }}</td>
+            <td>{{ r.value3 }}</td>
+            <td>{{ values|index:forloop.counter0 }}</td>
+            <td>{{ r.date|date:"Y" }}</td>
+            <td>{{ r.date|date:"M" }}</td>
+            <td>{{ r.date|date:"d" }}</td>
+            <td><a id = "a" href="{% url 'update_report' r.pk st year month day %}"  class="btn btn-danger btn-flat"><i class="fas fa-edit"></i></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

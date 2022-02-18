@@ -1,0 +1,250 @@
+
+.submenu {
+  display: none;
+  background: #292d33;
+  font-size: 14px;
+  
+  width: 230px;
+  
+}
+
+
+.submenu li i {
+  position: relative;
+  right: 7px;
+  font-size: 13px;
+  
+}
+
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #272c3a;
+  padding: 10px;
+  padding-left: 4px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  background: #1f2729;
+  
+
+}
+
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 26px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+
+.accordion li .fa-chevron-down {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  font-size: 13px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.accordion li .fa-stream, .accordion li .fa-users {
+  position: relative;
+  right: 7px;
+}
+
+.accordion li a:hover {
+  color: #1f2729;
+
+}
+
+.accordion li.open .link { color: #b63b4d; }
+
+.accordion li.open i { color: #b63b4d; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+.dropdownmenu ul, .dropdownmenu li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+    
+    
+}
+.dropdownmenu ul {
+	background: gray;
+  list-style: none;
+  
+    width: 100%;
+    align-content: center;
+    ruby-align: center;
+    align: center;
+}
+.dropdownmenu li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.dropdownmenu a {
+	background: rgb(153, 84, 19);
+	color: #FFFFFF;
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.dropdownmenu li:hover a {
+	background: #000000;
+}
+
+.intable ul, .intable li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+    
+    
+}
+.intable ul {
+	background: gray;
+  list-style: none;
+  
+    width: 100%;
+    align-content: center;
+    ruby-align: center;
+    align: center;
+}
+.intable li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.intable a {
+	
+	color: rgb(20, 19, 19);
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 4px 17px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.intable li:hover a {
+	background: #000000;
+}
+
+#submenyu {
+  
+  left: 0;
+  
+	opacity: 0;
+	position: absolute;
+	top: 35px;
+	visibility: hidden;
+	z-index: 1;
+}
+li:hover ul#submenyu {
+	opacity: 1;
+	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+	visibility: visible;
+}
+#submenyu li {
+  right: 63px;
+	float: none;
+  width: 170%;
+  position: relative;
+}
+#submenyu a:hover {
+	background: #DF4B05;
+}
+#submenyu a {
+	background-color:#615d5d;
+}
+
+
+
+
+
+
+#id_date_birthday_0, #id_date_passport_0, #id_date_card_0, #id_valute_card_0, #id_published_0, #id_day_payment_0 {
+    position: absolute;
+    width: 70px;
+    margin-bottom: 100px;
+
+  }
+  #id_date_birthday_1, #id_date_passport_1, #id_date_card_1, #id_published_1, #id_day_payment_1 {
+    width: 100px;
+    position: absolute;
+    
+    left: 70px;
+  }
+  #id_date_card_1{
+    width: 100px;
+    position: relative;
+    
+    left: 70px;
+  }
+  #id_date_birthday_2, #id_date_passport_2, #id_date_card_2, #id_published_2, #id_day_payment_2 {
+    width: 90px;
+    position: relative;
+    left: 140px;
+  }
+    
+  #button {
+    position: relative;
+    top: 50px;
+    
+    
+  }
+#pbutton {
+  left: 500px;
+  top: 50px;
+}
+
+
+#id_month, #id_status {
+    position: relative;
+}
+#id_card_number {
+    background: white;
+}
+
+#id_comment {
+  height: 100px;
+}

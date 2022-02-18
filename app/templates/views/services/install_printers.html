@@ -1,0 +1,27 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% block section %}
+
+<main class="container">
+    <section class="cards">
+        <!-- _____1 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">Ichki printer</h2>
+
+            </div>
+            <i class="card__icon fas fa-map-marker-alt"></i>
+            <a href="{% url '' %}" class="button">Kirish</a>
+        </div>
+        <!-- _____2 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">Tarmoqli printer</h2>
+            </div>
+            <i class="card__icon fas fa-desktop"></i>
+            <a href="{% url '' %}" class="button">Kirish</a>
+        </div>
+
+
+</main>
+{% endblock %}

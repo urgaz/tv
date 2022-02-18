@@ -1,0 +1,50 @@
+{% load static %}
+{% load index %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="20;url={% url 'statistic_kamalak' 1 %}" />
+    <link rel="stylesheet" href="{% static 'statistic/black-table.css' %}">
+    <title>{{ current_month }} </title>
+</head>
+<body>
+    
+    <h1><span class="blue">&lt;</span>{{ date|date:"d" }} - {{ date|date:"M" }}<span class="blue">&gt;</span> <span class="yellow"> natijalari</pan></h1>
+
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>Stanok</h1></th>
+                    <th><h1>Norma atqi</h1></th>
+                    <th><h1>1-Smena</h1></th>
+                    <th><h1>2-Smena</h1></th>
+                    <th><h1>3-Smena</h1></th>
+                    <th><h1>Jami</h1></th>
+                    <th><h1>Foiz</h1></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in values %}
+                <tr>
+                    <td><div class="td">{{ i|index:0 }}</div>   </td>
+                    <td><div class="td">{{ i|index:1 }}</div></td>
+                    <td><div class="td">{{ i|index:2 }}</div></td>
+                    <td><div class="td">{{ i|index:3 }}</div></td>
+                    <td><div class="td">{{ i|index:4 }}</div></td>
+                    <td><div class="td">{{ i|index:5 }}</div></td>
+                    <td><div class="td">{{ i|index:6 }}</div></td>
+                </tr>
+                {% endfor %}
+
+
+            </tbody>
+        </table>
+
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+.container td {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: auto;
+padding-left:2%;  
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+display: table;
+padding: 0 0 8em 0;
+
+}
+
+
+.container td {
+    font-weight: normal;
+    font-size: 10px;
+    border-radius: 12px;
+-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+     -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}

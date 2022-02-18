@@ -1,0 +1,18 @@
+.form-date {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+}
+
+.date-day {
+    width: 100px;
+}
+
+.date-month {
+    width: 200px;
+}
+
+
+.date-year {
+    width: 150px;
+}

@@ -1,0 +1,39 @@
+{% extends 'statistic/basic.html' %}
+{% block title %}
+Barcha ishchilar
+{% endblock %}
+
+
+
+{% block section %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover" id="userTable">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Nomi</th>
+                            <th>Indeks</th>
+                            <th>Zavod</th>
+                            <th>Harakat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in stanoks %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ s.title }}</td>
+                            <td>{{ s.number }}</td>
+                            <td>{{ s.organization }}</td>
+                            <td> <a id = "a" href="{% url 'update_stanok' s.pk %}"  class="btn btn-danger btn-flat"><i class="fas fa-edit"></i></a></td>
+                            
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

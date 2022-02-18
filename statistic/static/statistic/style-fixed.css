@@ -1,0 +1,115 @@
+.container {
+  margin-left: 80px;
+  position: relative;
+  
+  
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  cursor: pointer;
+
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 1px;
+}
+::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background:#1d3783;
+  border-radius: 2x;
+}
+
+
+.fixedTable {
+  position: relative;
+  background: #fff;
+  width: 770px;
+  height: 500px;
+  
+  background: #ecf0f5;
+}
+
+.fixedTable .table {
+  position: relative;
+  background: #fff;
+  
+}
+
+
+.table-fixed {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+}
+.table-fixed tr td:nth-child(1) {
+  width: 8%;
+  min-height: 50px;
+  height: 50px;
+  font-size: 12px;
+}
+
+.fixedTable-header {
+  width: 1200px;
+  height: 50px;
+  overflow: hidden;
+}
+.fixedTable-header .table tr td,
+.fixedTable-header .table tr th {
+  min-width: 100px;
+  width: 100px;
+  min-height: 50px;
+  height: 50px;
+}
+
+
+.fixedTable-sidebar {
+  height: auto;
+  max-height: 485px;
+  width: 250px;
+  float: left;
+  overflow: hidden;
+  background: #ecf0f5;
+  font-size: 14px;
+}
+
+.fixedTable-sidebar .table tr td:nth-child(1) {
+  width: 5%;
+  height: 20px;
+}
+.fixedTable-sidebar .table tr td:nth-child(2) {
+  width: 40%;
+  height: 20px;
+}
+.fixedTable-sidebar .table tr td:nth-child(3) {
+  width: 13%;
+  height: 20px;
+}
+.fixedTable-sidebar .table tr td:nth-child(4) {
+  width: 34%;
+  height: 20px;
+}
+
+
+.fixedTable-body {
+  overflow: auto;
+  width: 800px;
+  height: auto;
+  max-height: 500px;
+  float: left;
+  background: #ecf0f5;
+}
+.fixedTable-body .table tr td,
+.fixedTable-body .table tr th {
+  min-width: 150px;
+  width: 100px;
+  height: 20px;
+}

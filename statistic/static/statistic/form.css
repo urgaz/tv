@@ -1,0 +1,443 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 400px;
+  padding: 0% 0 0;
+  margin: auto;
+}
+
+.label {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 400px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
+}
+.form select {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 800px;
+  margin: 10 auto 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  text-align: left;
+  
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form .input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  
+
+}
+
+#id_document {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+
+}
+#dedediehdiuheiudheiu {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+
+  margin: 0 0 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+}
+#id_date_card_0, #id_date_card_1 {
+  width: 100px;
+}
+#id_published_0 {
+  position: relative;
+  top: 29px;
+  right: 140px;
+}
+#id_published_2 {
+  left: 48px;
+  position: relative;
+}
+#id_published_1 {
+  position: relative;
+  left: 48px;
+}
+
+#id_summa {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 10px 0 15px;
+  margin-top: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#id_code {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 20%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#id_number {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 75%;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#id_valute_card {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 60%;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#id_card_number {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#id_month {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+
+}
+
+#id_status {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+.submenu {
+  display: none;
+  background: #292d33;
+  font-size: 14px;
+  
+  width: 230px;
+  
+}
+
+
+.submenu li i {
+  position: relative;
+  right: 7px;
+  font-size: 13px;
+  
+}
+
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #272c3a;
+  padding: 10px;
+  padding-left: 4px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  background: #1f2729;
+  
+
+}
+
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 26px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+
+.accordion li .fa-chevron-down {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  font-size: 13px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.accordion li .fa-stream, .accordion li .fa-users {
+  position: relative;
+  right: 7px;
+}
+
+.accordion li a:hover {
+  color: #1f2729;
+
+}
+
+.accordion li.open .link { color: #b63b4d; }
+
+.accordion li.open i { color: #b63b4d; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+
+
+.dropdownmenu {
+  margin-bottom: auto;
+}
+
+.dropdownmenu ul, .dropdownmenu li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+    
+    
+}
+.dropdownmenu ul {
+	background: gray;
+  list-style: none;
+  
+    width: 100%;
+    align-content: center;
+    ruby-align: center;
+    align: center;
+}
+.dropdownmenu li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.dropdownmenu a {
+	background: rgb(153, 84, 19);
+	color: #FFFFFF;
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.dropdownmenu li:hover a {
+	background: #000000;
+}
+
+.intable ul, .intable li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+    
+    
+}
+.intable ul {
+	background: gray;
+  list-style: none;
+  
+    width: 100%;
+    align-content: center;
+    ruby-align: center;
+    align: center;
+}
+.intable li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.intable a {
+	
+	color: rgb(20, 19, 19);
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 4px 17px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.intable li:hover a {
+	background: #000000;
+}
+
+#submenyu {
+  
+  left: 0;
+  
+	opacity: 0;
+	position: absolute;
+	top: 35px;
+	visibility: hidden;
+	z-index: 1;
+  width: 150px;
+}
+li:hover ul#submenyu {
+	opacity: 1;
+	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
+	visibility: visible;
+}
+#submenyu li {
+  right: 0px;
+	float: none;
+  width: 100%;
+  position: relative;
+}
+#submenyu a:hover {
+	background: #DF4B05;
+}
+#submenyu a {
+	background-color:#615d5d;
+}
+
+.status {
+  color: white; 
+  text-align: center;
+  font-size: 12px;
+  width: 70px;
+  height: 17px;
+}
+.status-top {
+  position: relative;
+  left: 400px;
+  margin: 5px;
+  display: initial;
+  text-align: center;
+  
+  width: 80px;
+  height: 40px;
+  color:white;
+}
+
+#tbody {
+  overflow: auto;
+}

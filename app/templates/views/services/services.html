@@ -1,0 +1,48 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% block section %}
+
+<main class="container">
+    <section class="cards">
+        <!-- _____1 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">Ip addressni aniqlash</h2>
+            </div>
+            <i class="card__icon fas fa-map-marker-alt"></i>
+            <a href="{% url 'service_get_ip' %}" class="button">Kirish</a>
+        </div>
+        <!-- _____2 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">Boshqa kompyuter malumotlaridan foydalanish</h2>
+            </div>
+            <i class="card__icon fas fa-desktop"></i>
+            <a href="{% url 'service_net_use' %}" class="button">Batafsil</a>
+            
+        </div>       
+        
+        
+        <!-- _____3 -->
+        <div class="card">
+            <div class="card__box">
+                <h2 class="card__title">Printer ulash</h2>
+            </div>
+            <i class="card__icon fas fa-print"></i>
+            <a href="{% url 'service_install_printers' %}" class="button">Kirish</a>
+        </div>
+        
+        
+        <!-- _____4 -->
+                <div class="card">
+                    <div class="card__box">
+                        <h2 class="card__title">Windowsda avto yangilashni o'chirish</h2>
+                    </div>
+                    <i class="card__icon fas fa-windows"></i>
+                    <a href="{% url 'service_turnoff_auto_update' 'False' %}" class="button">Kirish</a>
+                </div>
+
+
+
+</main>
+{% endblock %}

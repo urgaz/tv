@@ -1,0 +1,12 @@
+db.sqlite3
+urgaz_tutorials/__pycache__
+__pycache__
+*/__pycache__
+*/__init__.py
+app/__pycache__
+statistic/__pycache__
+statistic/migrations
+app/migrations
+staticfiles
+.env
+marketing

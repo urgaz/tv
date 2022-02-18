@@ -1,0 +1,58 @@
+{% load static %}
+{% load index %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30;url={% url 'statistic_table_dayly' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'statistic/black-table.css' %}"> -->
+    {% if ip == '192.168.88.5' %}
+    <link rel="stylesheet" href="{% static 'statistic/black-table.css' %}">
+    {% else %}
+    <link rel="stylesheet" href="{% static 'statistic/black-table-kamalak.css' %}">
+    {% endif %}
+    
+    <title>{{ current_month }} </title>
+</head>
+<body>
+    
+    <h1><span class="blue">&lt;</span>{{ current_month }}<span class="blue">&gt;</span> <span class="yellow">oyi natijalari</pan></h1>
+
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>№</h1></th>
+                    <th><h1>Stanok</h1></th>
+                    <th><h1>Norma atqi</h1></th>
+                    <th><h1>Jami</h1></th>
+                    <th><h1>Foiz</h1></th>
+                    <th><h1>1-Smena</h1></th>
+                    <th><h1>2-Smena</h1></th>
+                    <th><h1>3-Smena</h1></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in values %}
+                <tr>
+                    <td><div class="td">{{ forloop.counter }}</div></td>
+                    <td><div class="td stanok">{{ i|index:0 }}</div>   </td>
+                    <td><div class="td">{{ i|index:1 }}</div></td>
+                    <td><div class="td">{{ i|index:5 }}</div></td>
+                    <td><div class="td">{{ i|index:6 }}</div></td>
+                    <td><div class="td">{{ i|index:2 }}</div></td>
+                    <td><div class="td">{{ i|index:3 }}</div></td>
+                    <td><div class="td">{{ i|index:4 }}</div></td>
+                </tr>
+                {% endfor %}
+
+
+            </tbody>
+        </table>
+
+    
+</body>
+</html>
