@@ -1,0 +1,39 @@
+{% extends 'statistic/basic.html' %}
+
+{% block h3 %}
+
+{% endblock %}
+
+
+{% block section %}
+<div class="box">
+    <div class="box-body">
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  
+                  {{ field.errors }} 
+                  {{ field.label_tag }} {{ field }}
+
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-md-6 col-sm-12">
+        <div class="form-buttons">
+            <input class="save-button btn btn-flat bg-orange" id="submit" name="submit" type="submit" value="Создать">
+        </div>
+        </div>
+        </form>
+        
+    </div>
+</div>
+{% endblock %}
+
+<!-- {% block script %}
+<script>
+    var a = document.getElementById('id_description');
+    a.placeholder = 'выделить с помощью // \n\n "текст на узбекском" // "текст на русском"';
+</script>
+{% endblock %} -->

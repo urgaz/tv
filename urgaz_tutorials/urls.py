@@ -31,6 +31,7 @@ from app.views.instructions import *
 
 ############################
 from statistic.views.main import *
+from statistic.views.list import *
 from statistic.views.statistic import urgaz, kamalak
 from statistic.views.create import *
 from statistic.views.update import *
@@ -52,7 +53,10 @@ urlpatterns = [
     path('instructions', instructions, name='instructions'),
     path('instructions/group_outlook', group_outlook, name='group_outlook'),
 
-    ######## STATISTIC URGAZ
+
+
+    # /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+    ######## STATISTIC
     path('statistic/<int:smena>/', statistic_menu, name='statistic'),
     path('statistic/table', statistic_table, name='statistic_table'),
     path('statistic/table/daily', statistic_table_dayly, name='statistic_table_dayly'),
@@ -79,4 +83,15 @@ urlpatterns = [
     path('reports/all/<str:st>/<int:year>/<int:month>/<int:day>/', reports_all, name='reports_all'),
     path('create/report', ReportCreateView.as_view(), name='create_report'),
     path('update/report/<int:pk>/<str:st>/<int:year>/<int:month>/<int:day>/', ReportEditView.as_view(), name='update_report'),
+
+    #smena
+    path('create/smena', SmenaCreateView.as_view(), name='create_smena'),
+    path('smena/all', smena_all, name='smena_all'),
+    path('update/smena/<int:pk>/', SmenaEditView.as_view(), name='update_smena'),
+
+    #surface
+    path('create/surface', SurfaceCreateView.as_view(), name='create_surface'),
+    
+
+    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

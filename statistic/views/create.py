@@ -26,3 +26,12 @@ class ReportCreateView(LoginRequiredMixin, CreateView):
     success_url = '/reports/all/Jami/0/0/0/'
 
 
+class SmenaCreateView(LoginRequiredMixin, CreateView):
+    template_name = 'create/create_smena.html'
+    form_class = SmenaForm
+    success_url = '/smena/all'
+
+class SurfaceCreateView(LoginRequiredMixin, CreateView):
+    template_name = 'create/create_surface.html'
+    form_class = SurfaceForm
+    success_url = '/surface/all'

@@ -1,4 +1,3 @@
-from os import remove
 from statistic.models import Report, Stanok, Worker
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -10,53 +9,6 @@ from statistic.views.update import ReportEditView
 @login_required
 def main_menu(request):
     return render(request, 'views/main_menu.html')
-
-@login_required
-def workers_all(request):
-    workers = Worker.objects.all()
-    context = {'workers': workers}
-    return render(request, 'views/workers_all.html', context)
-
-@login_required
-def stanoks_all(request):
-    query = Stanok.objects.all()
-    context = {'stanoks': query}
-    return render(request, 'views/stanoks_all.html', context)
-
-
-# @login_required
-# def reports_all(request):
-#     query = Report.objects.all()
-#     context = {'reports': query}
-#     return render(request, 'views/reports_all.html', context)
-
-
-@login_required
-def reports_all(request, st, year, month, day):
-    obj = Report.objects.all().order_by('-date', 'stanok__number', 'value')
-    
-    if year != 0:
-        obj = obj.filter(date__year=year)
-    if month != 0:
-        obj = obj.filter(date__month=month)
-    if day != 0:
-        obj = obj.filter(date__day=day)
-    if st != 'Jami':
-        obj = obj.filter(stanok__number=st)
-        
-    values = []
-    for i in obj:
-        values.append(int(i.value) + int(i.value2) + int(i.value3))
-
-    context = {'reports': obj, 'year': year, 'month': month, 'day': day, 'st': st, 'values': values}
-    context['years'] = ['2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027']
-    context['months'] = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
-    context['days'] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
-    
-    context['stanoks'] = Stanok.objects.all()
-    # context['path'] = ps
-    
-    return render(request, 'views/reports_all.html', context)
 
 def custom_sort(t):
     return t[1]
@@ -78,7 +30,7 @@ def statistic_menu(request, smena):
                 summary += int(r.value2)
             elif smena == 3:
                 summary += int(r.value3)
-                if r.date.isocalendar().weekday == 7:
+                if r.date.isoweekday() == 7:
                     execute_day += 1
                 
         summary_percent = round(((float(summary)/((float(s.norma_value)*current_time.day) - (float(s.norma_value)*execute_day)))*100), 2)
@@ -129,7 +81,7 @@ def statistic_table(request):
             summary2 += int(r.value2)
             summary3 += int(r.value3)
 
-            if r.date.isocalendar().weekday == 7:
+            if r.date.isoweekday() == 7:
                 execute_day += 1
                 
         summary = summary1 + summary2 + summary3
@@ -151,7 +103,7 @@ def statistic_table_dayly(request):
     today = date.today()
     
     yesterday = today - timedelta(days=1)
-    week = yesterday.isocalendar().weekday
+    week = yesterday.isoweekday()
     values_list = []
 
     for r in Report.objects.filter(date__day=yesterday.day, date__month=yesterday.month, date__year=yesterday.year):
@@ -203,7 +155,7 @@ def three(request):
             summary2 += int(r.value2)
             summary3 += int(r.value3)
 
-            if r.date.isocalendar().weekday == 7:
+            if r.date.isoweekday() == 7:
                 execute_day += 1
                 
         summary = summary1 + summary2 + summary3

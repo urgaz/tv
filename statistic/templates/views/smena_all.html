@@ -1,0 +1,38 @@
+{% extends 'statistic/basic.html' %}
+{% block title %}
+Smena
+{% endblock %}
+
+
+
+{% block section %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover" id="userTable">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Master</th>
+                            <th>Norma lenta</th>
+                            <th>Norma kley</th>
+                            <th>Harakat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in smena %}
+                        <tr>
+                            <td>{{ s.no }}</td>
+                            <td>{{ s.master }}</td>
+                            <td>{{ s.norma_lenta }}</td>
+                            <td>{{ s.norma_kley }}</td>
+                            <td><a id = "a" href="{% url 'update_smena' s.pk %}"  class="btn btn-danger btn-flat"><i class="fas fa-edit"></i></a></td>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
