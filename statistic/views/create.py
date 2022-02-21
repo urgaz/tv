@@ -34,4 +34,4 @@ class SmenaCreateView(LoginRequiredMixin, CreateView):
 class SurfaceCreateView(LoginRequiredMixin, CreateView):
     template_name = 'create/create_surface.html'
     form_class = SurfaceForm
-    success_url = '/surface/all'
+    success_url = '/surface/all/Jami/0/0/0/'

@@ -1,0 +1,147 @@
+{% extends 'statistic/basic.html' %}
+
+{% load static %}
+{% load index %}
+{% load tag_library %}
+{% load func %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'statistic/fixed.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'statistic/filter.css' %}">
+<link rel="stylesheet" href="{% static 'statistic/form.css' %}">
+{% endblock %}
+
+{% block section %}
+            
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Yil</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'surface_all' sm 0 month day %}">Jami</a></li>  
+                    {% for i in years %}
+                    <li><a href="{% url 'surface_all' sm i|to_int month day %}">{{ i }}</a></li>
+                    {% endfor %}
+                
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Oy</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'surface_all' sm year 0 day %}">Jami</a></li> 
+                    {% for i in months %}
+                    <li><a href="{% url 'surface_all' sm year forloop.counter day %}">{{ i }}</a></li>
+                    
+                    {% endfor %}
+                    
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+
+          <th>
+            <nav class="intable">
+              <ul>
+      
+                <li><a href="#" class="intable__a">Kun</a>
+                  <ul id="submenyu">
+                    <li><a href="{% url 'surface_all' sm year month 0 %}">Jami</a></li> 
+                    {% for i in days %}
+                    <li><a href="{% url 'surface_all' sm year month i|to_int %}">{{ i }}</a></li>
+                    
+                    {% endfor %}
+                    
+                  </ul>
+                </li>
+      
+              </ul>
+            </nav>
+          </th>
+
+
+
+          <th>
+            <nav class="intable">
+                <ul>
+        
+                  <li><a href="#" class="intable__a">Smena</a>
+                    <ul id="submenyu">
+                        <li><a href="{% url 'surface_all' 'Jami' year month day %}">Jami</a></li>  
+                      {% for i in smena %}
+                      <li><a href="{% url 'surface_all' i.no year month day %}">{{ i.no }} - smena</a></li>
+                      {% endfor %}
+                  
+                    </ul>
+                  </li>
+        
+                </ul>
+              </nav>
+          </th>
+          <th>Master</th>
+          <th>Soni</th>
+          <th>Sklad m<sup>2</sup></th>
+          <th>Norma lenta m<sup>2</sup></th>
+          <th>Norma farqi</th>
+          <th>Lenta soati</th>
+          <th>m<sup>2</sup> soatiga</th>
+          <th>Kley stanok m<sup>2</sup></th>
+          <th>Norma kley stanok</th>
+          <th>Sley stanok soati</th>
+          <th>Harakat</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+
+
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for r in surface %}
+        <tr>
+           
+
+
+            <td>{{ forloop.counter }}</td>
+            <td>{{ r.date|date:"Y" }}</td>
+            <td>{{ r.date|date:"M" }}</td>
+            <td>{{ r.date|date:"d" }}</td>
+            <td>{{ r.smena.no }}</td>
+            <td>{{ r.smena.master }}</td>
+            <td>{{ r.soni }}</td>
+            <td>{{ r.sklad }}</td>
+            <td>{{ r.smena.norma_lenta }}</td>
+            <td>{{ r.sklad|sub:r.smena.norma_lenta }}</td>
+            <td>{{ r.lenta }}</td>
+            <td>{{ r.m2 }}</td>
+            <td>{{ r.kley_st_m2 }}</td>
+            <td>{{ r.smena.norma_kley }}</td>
+            <td>{{ r.kley_st }}</td>
+            <td><a id = "a" href="{% url 'update_surface' r.pk sm year month day %}"  class="btn btn-danger btn-flat"><i class="fas fa-edit"></i></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

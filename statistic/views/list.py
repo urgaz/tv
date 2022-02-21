@@ -61,3 +61,32 @@ def smena_all(request):
     smena = Smena.objects.all()
     context = {'smena': smena}
     return render(request, 'views/smena_all.html', context)
+
+
+
+@login_required
+def surface_all(request, sm, year, month, day):
+    obj = Surface.objects.all().order_by('-date', 'smena')
+    
+    if year != 0:
+        obj = obj.filter(date__year=year)
+    if month != 0:
+        obj = obj.filter(date__month=month)
+    if day != 0:
+        obj = obj.filter(date__day=day)
+    if sm != 'Jami':
+        obj = obj.filter(smena__no=str(sm))
+        
+    values = []
+    # for i in obj:
+    #     values.append(int(i.value) + int(i.value2) + int(i.value3))
+
+    context = {'surface': obj, 'year': year, 'month': month, 'day': day, 'sm': sm, 'values': values}
+    context['years'] = ['2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027']
+    context['months'] = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+    context['days'] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
+    
+    context['smena'] = Smena.objects.all()
+    # context['path'] = ps
+    
+    return render(request, 'views/surface_all.html', context)

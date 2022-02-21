@@ -90,6 +90,7 @@ else:
     DATABASES = {
         'default': {
     	'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'DISABLE_SERVER_SIDE_CURSORS': True,
     	'NAME': DB_NAME,
     	'USER': DB_USER,
     	'PASSWORD': DB_PASSWORD,

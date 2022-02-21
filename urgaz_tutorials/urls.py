@@ -91,7 +91,8 @@ urlpatterns = [
 
     #surface
     path('create/surface', SurfaceCreateView.as_view(), name='create_surface'),
-    
+    path('surface/all/<str:sm>/<int:year>/<int:month>/<int:day>/', surface_all, name='surface_all'),
+    path('update/surface/<int:pk>/<str:sm>/<int:year>/<int:month>/<int:day>/', SurfaceEditView.as_view(), name='update_surface'),
 
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
