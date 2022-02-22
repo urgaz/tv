@@ -67,58 +67,58 @@ class ReportForm(ModelForm):
     field_order = ['date', 'stanok', 'value', 'value2', 'value3']
 
 
-# class SmenaForm(ModelForm):
-#     class Meta:
-#         model = Smena
-#         fields = {'no', 'master', 'norma_lenta', 'norma_kley', 'organization'}
-#         required = {
-#             'no': True,
-#             'master': True, 
-#             'norma_lenta': True, 
-#             'norma_kley': True,
-#         }
+class SmenaForm(ModelForm):
+    class Meta:
+        model = Smena
+        fields = {'no', 'master', 'norma_lenta', 'norma_kley', 'organization'}
+        required = {
+            'no': True,
+            'master': True, 
+            'norma_lenta': True, 
+            'norma_kley': True,
+        }
 
-#         widgets = {
-#             'no': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'master': forms.TextInput(attrs={'class': 'form-control'}),
-#             'norma_lenta': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'norma_kley': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'organization': forms.Select(attrs={'class': 'form-control'}),
-#         }
+        widgets = {
+            'no': forms.NumberInput(attrs={'class': 'form-control'}),
+            'master': forms.TextInput(attrs={'class': 'form-control'}),
+            'norma_lenta': forms.NumberInput(attrs={'class': 'form-control'}),
+            'norma_kley': forms.NumberInput(attrs={'class': 'form-control'}),
+            'organization': forms.Select(attrs={'class': 'form-control'}),
+        }
 
-#         labels = {
-#             'no': '№',
-#             'master': 'Master', 
-#             'organization': 'Tashkilot', 
-#             'norma_lenta': 'Norma lenta', 
-#             'norma_kley': 'Norma kley',
-#         }
-#     field_order = ['no', 'master', 'organization', 'norma_lenta', 'norma_kley']
+        labels = {
+            'no': '№',
+            'master': 'Master', 
+            'organization': 'Tashkilot', 
+            'norma_lenta': 'Norma lenta', 
+            'norma_kley': 'Norma kley',
+        }
+    field_order = ['no', 'master', 'organization', 'norma_lenta', 'norma_kley']
 
 
-# class SurfaceForm(ModelForm):
-#     class Meta:
-#         model = Surface
-#         fields = {'date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st'}
-#         widgets = {
-#             'date': DateReport, 
-#             'smena': forms.Select(attrs={'class': 'form-control'}),
-#             'soni': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'sklad': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'lenta': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'm2': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'kley_st_m2': forms.NumberInput(attrs={'class': 'form-control'}),
-#             'kley_st': forms.NumberInput(attrs={'class': 'form-control'})
-#         }
+class SurfaceForm(ModelForm):
+    class Meta:
+        model = Surface
+        fields = {'date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st'}
+        widgets = {
+            'date': DateReport, 
+            'smena': forms.Select(attrs={'class': 'form-control'}),
+            'soni': forms.NumberInput(attrs={'class': 'form-control'}),
+            'sklad': forms.NumberInput(attrs={'class': 'form-control'}),
+            'lenta': forms.NumberInput(attrs={'class': 'form-control'}),
+            'm2': forms.NumberInput(attrs={'class': 'form-control'}),
+            'kley_st_m2': forms.NumberInput(attrs={'class': 'form-control'}),
+            'kley_st': forms.NumberInput(attrs={'class': 'form-control'})
+        }
 
-#         labels = {
-#             'date': 'Sana',
-#             'smena': 'Smena',
-#             'soni': 'Soni',
-#             'sklad': 'Sklad M2',
-#             'lenta': 'Lenta soati',
-#             'm2': 'M2 soatiga',
-#             'kley_st_m2': 'Kley st M2',
-#             'kley_st': 'Kley st soati',
-#         }
-#     field_order = ['date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st']
+        labels = {
+            'date': 'Sana',
+            'smena': 'Smena',
+            'soni': 'Soni',
+            'sklad': 'Sklad M2',
+            'lenta': 'Lenta soati',
+            'm2': 'M2 soatiga',
+            'kley_st_m2': 'Kley st M2',
+            'kley_st': 'Kley st soati',
+        }
+    field_order = ['date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st']
