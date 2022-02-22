@@ -25,17 +25,17 @@ class ReportEditView(LoginRequiredMixin, UpdateView):
         values = context['view'].__dict__['kwargs']
         return '/reports/all/{}/{}/{}/{}/'.format(values['st'], str(values['year']), str(values['month']), str(values['day']))
 
-class SmenaEditView(LoginRequiredMixin, UpdateView):
-    model = Smena
-    form_class = SmenaForm
-    success_url = '/smena/all'
+# class SmenaEditView(LoginRequiredMixin, UpdateView):
+#     model = Smena
+#     form_class = SmenaForm
+#     success_url = '/smena/all'
 
-class SurfaceEditView(LoginRequiredMixin, UpdateView):
-    model = Surface
-    form_class = SurfaceForm
+# class SurfaceEditView(LoginRequiredMixin, UpdateView):
+#     model = Surface
+#     form_class = SurfaceForm
 
     
-    def get_success_url(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        values = context['view'].__dict__['kwargs']
-        return '/surface/all/{}/{}/{}/{}/'.format(values['sm'], str(values['year']), str(values['month']), str(values['day']))
+#     def get_success_url(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
+#         values = context['view'].__dict__['kwargs']
+#         return '/surface/all/{}/{}/{}/{}/'.format(values['sm'], str(values['year']), str(values['month']), str(values['day']))
