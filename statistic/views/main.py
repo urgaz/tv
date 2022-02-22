@@ -1,4 +1,4 @@
-from statistic.models import Report, Stanok, Worker, Smena, Surface
+from statistic.models import *
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from datetime import date, datetime, timedelta
