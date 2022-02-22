@@ -23,21 +23,21 @@ class Report(models.Model):
     value2 = CharField(null=True, max_length=10, blank=False)  # atqi2 2-smena
     value3 = CharField(null=True, max_length=10, blank=False)  # atqi3 3-smena
 
-# class Surface(models.Model):
-#     date = DateField(null=True, blank=False, max_length=20)
-#     smena = ForeignKey('Smena', null=True, blank=False, on_delete=models.PROTECT)
-#     soni = models.FloatField(null=True, blank=False)
-#     sklad = models.FloatField(null=True, blank=False)  # m2
-#     lenta = models.FloatField(null=True, blank=False)   # soati
-#     m2 = models.FloatField(null=True, blank=False) # soatiga
-#     kley_st_m2 = models.FloatField(null=True, blank=False)
-#     kley_st = models.FloatField(null=True, blank=False)  # soatiga
+class Surface(models.Model):
+    date = DateField(null=True, blank=False, max_length=20)
+    smena = ForeignKey('Smena', null=True, blank=False, on_delete=models.PROTECT)
+    soni = models.FloatField(null=True, blank=False)
+    sklad = models.FloatField(null=True, blank=False)  # m2
+    lenta = models.FloatField(null=True, blank=False)   # soati
+    m2 = models.FloatField(null=True, blank=False) # soatiga
+    kley_st_m2 = models.FloatField(null=True, blank=False)
+    kley_st = models.FloatField(null=True, blank=False)  # soatiga
 
-# class Smena(models.Model):
-#     no = CharField(null=True, max_length=10, blank=True)
-#     master = CharField(null=True, max_length=100, blank=True)
-#     norma_lenta = models.FloatField(null=True, blank=False)
-#     norma_kley = models.FloatField(null=True, blank=False)
-#     organization = CharField(null=True, max_length=20, blank=True, choices=(('urgaz', 'urgaz'), ('kamalak', 'kamalak')))
-#     def __str__(self) -> str:
-#         return self.no + " " + self.organization
+class Smena(models.Model):
+    no = CharField(null=True, max_length=10, blank=True)
+    master = CharField(null=True, max_length=100, blank=True)
+    norma_lenta = models.FloatField(null=True, blank=False)
+    norma_kley = models.FloatField(null=True, blank=False)
+    organization = CharField(null=True, max_length=20, blank=True, choices=(('urgaz', 'urgaz'), ('kamalak', 'kamalak')))
+    def __str__(self) -> str:
+        return self.no + " " + self.organization

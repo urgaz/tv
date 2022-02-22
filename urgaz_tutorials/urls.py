@@ -65,7 +65,7 @@ urlpatterns = [
     path('statistic/three', three, name='statistic_three'),
 
     #kleyka
-    path('statistic/kleyka/<str:organization>/', kleyka, name='statistic_kleyka'),
+    # path('statistic/kleyka/<str:organization>/', kleyka, name='statistic_kleyka'),
 
     # ######## STATISTIC KAMALAK
     # path('statistic/kamalak/<int:smena>/', kamalak.statistic_menu, name='statistic_kamalak'),
@@ -87,15 +87,15 @@ urlpatterns = [
     path('create/report', ReportCreateView.as_view(), name='create_report'),
     path('update/report/<int:pk>/<str:st>/<int:year>/<int:month>/<int:day>/', ReportEditView.as_view(), name='update_report'),
 
-    #smena
-    path('create/smena', SmenaCreateView.as_view(), name='create_smena'),
-    path('smena/all', smena_all, name='smena_all'),
-    path('update/smena/<int:pk>/', SmenaEditView.as_view(), name='update_smena'),
+    # #smena
+    # path('create/smena', SmenaCreateView.as_view(), name='create_smena'),
+    # path('smena/all', smena_all, name='smena_all'),
+    # path('update/smena/<int:pk>/', SmenaEditView.as_view(), name='update_smena'),
 
-    #surface
-    path('create/surface', SurfaceCreateView.as_view(), name='create_surface'),
-    path('surface/all/<str:sm>/<int:year>/<int:month>/<int:day>/', surface_all, name='surface_all'),
-    path('update/surface/<int:pk>/<str:sm>/<int:year>/<int:month>/<int:day>/', SurfaceEditView.as_view(), name='update_surface'),
+    # #surface
+    # path('create/surface', SurfaceCreateView.as_view(), name='create_surface'),
+    # path('surface/all/<str:sm>/<int:year>/<int:month>/<int:day>/', surface_all, name='surface_all'),
+    # path('update/surface/<int:pk>/<str:sm>/<int:year>/<int:month>/<int:day>/', SurfaceEditView.as_view(), name='update_surface'),
 
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

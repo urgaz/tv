@@ -22,5 +22,5 @@ class SmenaAdmin(admin.ModelAdmin):
 admin.site.register(Worker, WorkerAdmin)
 admin.site.register(Stanok, StanokAdmin)
 admin.site.register(Report, ReportAdmin)
-admin.site.register(Surface, SurfaceAdmin)
-admin.site.register(Smena, SmenaAdmin)
+# admin.site.register(Surface, SurfaceAdmin)
+# admin.site.register(Smena, SmenaAdmin)
