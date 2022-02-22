@@ -6,7 +6,9 @@ __pycache__
 app/__pycache__
 statistic/__pycache__
 statistic/migrations
+statistic/migrations/__init__.py
 app/migrations
+app/migrations/__init__.py
 staticfiles
 .env
 marketing
