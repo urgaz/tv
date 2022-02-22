@@ -26,7 +26,6 @@ class Report(models.Model):
 class Surface(models.Model):
     date = DateField(null=True, blank=False, max_length=20)
     smena = ForeignKey('Smena', null=True, blank=False, on_delete=models.PROTECT)
-    organization = CharField(null=True, max_length=20, blank=True, choices=(('urgaz', 'urgaz'), ('kamalak', 'kamalak')))
     soni = models.FloatField(null=True, blank=False)
     sklad = models.FloatField(null=True, blank=False)  # m2
     lenta = models.FloatField(null=True, blank=False)   # soati
@@ -39,5 +38,6 @@ class Smena(models.Model):
     master = CharField(null=True, max_length=100, blank=True)
     norma_lenta = models.FloatField(null=True, blank=False)
     norma_kley = models.FloatField(null=True, blank=False)
+    organization = CharField(null=True, max_length=20, blank=True, choices=(('urgaz', 'urgaz'), ('kamalak', 'kamalak')))
     def __str__(self) -> str:
-        return self.no
+        return self.no + " " + self.organization

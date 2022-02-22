@@ -64,6 +64,9 @@ urlpatterns = [
     path('statistic', main_menu, name='main_menu'),
     path('statistic/three', three, name='statistic_three'),
 
+    #kleyka
+    path('statistic/kleyka/<str:organization>/', kleyka, name='statistic_kleyka'),
+
     # ######## STATISTIC KAMALAK
     # path('statistic/kamalak/<int:smena>/', kamalak.statistic_menu, name='statistic_kamalak'),
     # path('statistic/kamalak/table', kamalak.statistic_table, name='statistic_kamalak_table'),

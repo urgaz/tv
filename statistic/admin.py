@@ -14,10 +14,10 @@ class ReportAdmin(admin.ModelAdmin):
 
 
 class SurfaceAdmin(admin.ModelAdmin):
-    list_display = ('date', 'smena', 'organization')
+    list_display = ('date', 'smena')
 
 class SmenaAdmin(admin.ModelAdmin):
-    list_display = ('no', 'master', 'norma_lenta', 'norma_kley')
+    list_display = ('no', 'organization', 'master', 'norma_lenta', 'norma_kley')
 
 admin.site.register(Worker, WorkerAdmin)
 admin.site.register(Stanok, StanokAdmin)

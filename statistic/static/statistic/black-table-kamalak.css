@@ -47,7 +47,7 @@
        font-weight: bold;
        font-size: 2.0em;     
    /* text-align: left; */
-   color: #185875;
+   color: #167aa9;
  }
  
  .container td {
@@ -87,7 +87,7 @@
  }
  
  .container th {
-       background-color: #1F2739;
+       /* background-color: #1F2739; */
  }
  
  .container td:first-child { color: #FB667A; }
@@ -130,4 +130,8 @@
 
  .stanok {
    color: bisque;
+ }
+
+ .thh1 {
+   margin: 0 100px;
  }

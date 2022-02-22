@@ -70,7 +70,7 @@ class ReportForm(ModelForm):
 class SmenaForm(ModelForm):
     class Meta:
         model = Smena
-        fields = {'no', 'master', 'norma_lenta', 'norma_kley'}
+        fields = {'no', 'master', 'norma_lenta', 'norma_kley', 'organization'}
         required = {
             'no': True,
             'master': True, 
@@ -83,25 +83,26 @@ class SmenaForm(ModelForm):
             'master': forms.TextInput(attrs={'class': 'form-control'}),
             'norma_lenta': forms.NumberInput(attrs={'class': 'form-control'}),
             'norma_kley': forms.NumberInput(attrs={'class': 'form-control'}),
+            'organization': forms.Select(attrs={'class': 'form-control'}),
         }
 
         labels = {
             'no': '№',
             'master': 'Master', 
+            'organization': 'Tashkilot', 
             'norma_lenta': 'Norma lenta', 
             'norma_kley': 'Norma kley',
         }
-    field_order = ['no', 'master', 'norma_lenta', 'norma_kley']
+    field_order = ['no', 'master', 'organization', 'norma_lenta', 'norma_kley']
 
 
 class SurfaceForm(ModelForm):
     class Meta:
         model = Surface
-        fields = {'date', 'smena', 'organization', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st'}
+        fields = {'date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st'}
         widgets = {
             'date': DateReport, 
             'smena': forms.Select(attrs={'class': 'form-control'}),
-            'organization': forms.Select(attrs={'class': 'form-control'}),
             'soni': forms.NumberInput(attrs={'class': 'form-control'}),
             'sklad': forms.NumberInput(attrs={'class': 'form-control'}),
             'lenta': forms.NumberInput(attrs={'class': 'form-control'}),
@@ -113,7 +114,6 @@ class SurfaceForm(ModelForm):
         labels = {
             'date': 'Sana',
             'smena': 'Smena',
-            'organization': 'Tashkilot', 
             'soni': 'Soni',
             'sklad': 'Sklad M2',
             'lenta': 'Lenta soati',
@@ -121,4 +121,4 @@ class SurfaceForm(ModelForm):
             'kley_st_m2': 'Kley st M2',
             'kley_st': 'Kley st soati',
         }
-    field_order = ['date', 'smena', 'organization', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st']
+    field_order = ['date', 'smena', 'soni', 'sklad', 'lenta', 'm2', 'kley_st_m2', 'kley_st']

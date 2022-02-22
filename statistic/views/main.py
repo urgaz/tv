@@ -1,4 +1,4 @@
-from statistic.models import Report, Stanok, Worker
+from statistic.models import Report, Stanok, Worker, Smena, Surface
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from datetime import date, datetime, timedelta
@@ -180,3 +180,12 @@ def three(request):
     
     context = {'winner': winner[0], 'sovrin': sovrin, 'values': values_list, 'current_month': months[current_time.month-1]}
     return render(request, 'views/three.html', context)
+
+
+def kleyka(request, organization):
+    current_time = date.today() - timedelta(days=1)
+    values_list = []
+    # for sm in Smena.objects.filter(organization=organization):
+    list = Surface.objects.filter(smena__organization=organization, date__day=current_time.day, date__month=current_time.month, date__year=current_time.year)
+    context = {'list': list, 'today': current_time.strftime('%Y.%m.%d')}
+    return render(request, 'views/kleyka.html', context)
