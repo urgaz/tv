@@ -187,5 +187,5 @@ def kleyka(request, organization):
     values_list = []
     # for sm in Smena.objects.filter(organization=organization):
     list = Surface.objects.filter(smena__organization=organization, date__day=current_time.day, date__month=current_time.month, date__year=current_time.year)
-    context = {'list': list, 'today': current_time.strftime('%d%m%Y')}
+    context = {'list': list, 'today': current_time.strftime('%d.%m.%Y')}
     return render(request, 'views/kleyka.html', context)
