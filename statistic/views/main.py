@@ -32,9 +32,10 @@ def statistic_menu(request, smena):
                 summary += int(r.value3)
                 if r.date.isoweekday() == 7:
                     execute_day += 1
-                
-        summary_percent = round(((float(summary)/((float(s.norma_value)*current_time.day) - (float(s.norma_value)*execute_day)))*100), 2)
-
+        try:
+            summary_percent = round(((float(summary)/((float(s.norma_value)*current_time.day) - (float(s.norma_value)*execute_day)))*100), 2)
+        except:
+            summary_percent = 0
         values_list.append(['{}'.format(str(s.number)), summary_percent])
     
     values_list.sort(key=custom_sort, reverse=True)
